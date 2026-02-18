@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://clircas65q5hx"]
+
+[ext_resource type="Script" uid="uid://0ewh4r4my78y" path="res://Script/Models/Picross/PicrossCell.gd" id="1_4yq8p"]
+[ext_resource type="Texture2D" uid="uid://ctqngrfacxwgf" path="res://Assets/Picross/PicrossCell.png" id="2_41use"]
+[ext_resource type="Texture2D" uid="uid://vcuy4tjahv3s" path="res://Assets/Picross/XMark.png" id="3_41use"]
+[ext_resource type="Texture2D" uid="uid://0xx3yalh01w5" path="res://Assets/Picross/PicrossCellOutline.png" id="3_s43i2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4suaq"]
+size = Vector2(40, 40)
+
+[node name="PicrossCell" type="Node2D"]
+script = ExtResource("1_4yq8p")
+
+[node name="PicrossCell" type="Sprite2D" parent="."]
+position = Vector2(20, 20)
+texture = ExtResource("2_41use")
+
+[node name="XMark" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(20, 20)
+texture = ExtResource("3_41use")
+
+[node name="PicrossCellHover" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0.94509804, 0.24705882)
+position = Vector2(20, 20)
+texture = ExtResource("2_41use")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_4suaq")
+
+[node name="PicrossCellOutline" type="Sprite2D" parent="."]
+position = Vector2(20, 20)
+texture = ExtResource("3_s43i2")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

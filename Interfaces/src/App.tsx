@@ -1,9 +1,10 @@
 import Header from './Components/Headers/Header'
-import GameDificulty from './Components/GameDificulty/GameDificulty'
+// import GameDificulty from './Components/GameDificulty/GameDificulty'
 import Game from './Entites/Game'
 import GameMode from './Entites/GameMode'
 import GameLevelsDificulty from './Entites/GameLevelsDificulty'
 import GameLevel from './Entites/GameLevel'
+import GameContent from './Components/GameContent/GameContent'
 
 var normalDificulty = [new GameLevelsDificulty("Easy", 
 	                    [
@@ -155,7 +156,7 @@ function App() {
   return (
     <>
 		<Header/>
-		<GameDificulty {...game}/>
+		<GameContent/>
     </>
   )
 }

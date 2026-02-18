@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmqr5a4hpkmi6"]
+
+[ext_resource type="Script" uid="uid://cyouo1yqkdmcq" path="res://Script/Models/Picross/PicrossClue.gd" id="1_4v6gt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k5rmw"]
+
+[node name="PicrossClue" type="Node2D"]
+script = ExtResource("1_4v6gt")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+text = "0"
+label_settings = SubResource("LabelSettings_k5rmw")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

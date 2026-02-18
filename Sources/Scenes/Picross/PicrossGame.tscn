@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtyggwddjkmmv"]
+
+[ext_resource type="Script" uid="uid://xxwlhqpbge5x" path="res://Script/Models/Picross/PicrossGame.gd" id="1_366vu"]
+[ext_resource type="PackedScene" uid="uid://da2bd5qaccfqi" path="res://Scenes/Picross/PicrossGrid.tscn" id="2_ahyme"]
+
+[node name="PicrossGame" type="Node2D"]
+script = ExtResource("1_366vu")
+
+[node name="PicrossGrid" parent="." instance=ExtResource("2_ahyme")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
