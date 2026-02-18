@@ -1,0 +1,30 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* a:hover { */
+
+body{
+	background-color: var(--bg);
+}
+:root{
+  --bg: #00DEE0;
+  --bgHeader: #00E098;
+  --bgContainer: #00E04C;
+  --bgHeaderContainer: #4BDEE0;
+  
+  --text: #1a1a1a;
+  --title: #004FE0;
+  --subTitle: #0096E0;
+}
+
+p{
+	color: var(--text);
+}
