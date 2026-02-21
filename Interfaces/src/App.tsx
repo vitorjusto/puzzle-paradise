@@ -3,8 +3,22 @@ import Header from './Components/Headers/Header'
 import Game from './Entites/Game'
 import GameMode from './Entites/GameMode'
 import GameLevelsDificulty from './Entites/GameLevelsDificulty'
+import HomeGameContentsBase from './Components/HomeGameContents/HomeGameContents'
+import GameDificulty from './Components/GameDificulty/GameDificulty'
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage'
 import GameLevel from './Entites/GameLevel'
-import GameContent from './Components/GameContent/GameContent'
+import {createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+function App() {
+
+  return (
+    <>
+		<Header/>
+		<RouterProvider router={router}/>
+    </>
+  )
+}
+
 
 var normalDificulty = [new GameLevelsDificulty("Easy", 
 	                    [
@@ -151,14 +165,12 @@ var normalDificulty2 = [new GameLevelsDificulty("Easy",
 var gameModes = [new GameMode("Nonogram", normalDificulty), new GameMode("Colored", normalDificulty2)]
 var game = new Game("Picross", gameModes)
 
-function App() {
 
-  return (
-    <>
-		<Header/>
-		<GameContent/>
-    </>
-  )
-}
+const router = createBrowserRouter([
+	{path:"/", element:<HomeGameContentsBase/>},
+	{path: "/GameDificulty", element: <GameDificulty {...game}/>},
+	{path:"*", element:<NotFoundPage/>}
+
+])
 
 export default App
