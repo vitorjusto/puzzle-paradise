@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type Game from '../../Entites/Game'
 import GameLevel from '../../Entites/GameLevel'
 import GameLevelsDificulty from '../../Entites/GameLevelsDificulty'
@@ -69,11 +70,11 @@ function GameDificultyTab(props: any) {
 function GameLevelContainer(props: any) {
 
   return (
-	<>
+	<Link to="/GameContent">
 		<div className="GameLevel">
 			{props.name}
 		</div>
-	</>
+	</Link>
   )
 }
 

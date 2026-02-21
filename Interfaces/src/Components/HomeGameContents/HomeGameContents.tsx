@@ -1,6 +1,7 @@
 import '../../index.css'
 import './HomeGameContents.css'
 import viteLogo from '../../assets/react.svg'
+import { Link } from 'react-router-dom'
 
 export default function HomeGameContentsBase() 
 {
@@ -16,7 +17,7 @@ export default function HomeGameContentsBase()
 
   const listaTeste = teste.map(
     (t) => (
-      <HomeGameContents {...t}/>
+      <HomeGameContents key={t.GameName} {...t}/>
     )
   )
   return (
@@ -29,11 +30,13 @@ export default function HomeGameContentsBase()
 function HomeGameContents(props: GameContent) {
 
   return (
-	<div className='HomeGameContent'>
-        <img src={viteLogo} width={50} height={50}/>
-		<h1 className='GameTitle'>{props.GameName}</h1>
-		<p className='GameStats'>{props.GameStats}</p>
-	</div>
+	<Link to="GameDificulty">
+		<div className='HomeGameContent'>
+    	    <img src={viteLogo} width={50} height={50}/>
+			<h1 className='GameTitle'>{props.GameName}</h1>
+			<p className='GameStats'>{props.GameStats}</p>
+		</div>
+	</Link>
 
   )
 }

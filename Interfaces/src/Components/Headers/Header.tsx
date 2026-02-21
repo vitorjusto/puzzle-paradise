@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../../index.css'
 import './Header.css'
 
@@ -8,7 +9,9 @@ function Header() {
 	<>
 		<div className="Header">
 			<div className="HeaderContainerLeft">
-				<div className="Button"></div>
+				<Link to="/">
+					<div className="Button"></div>
+				</Link>
 				<div className="Button"></div>
 				<div className="CurrencyBase">
 					<div className="Currency">

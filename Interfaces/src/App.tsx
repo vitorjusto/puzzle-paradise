@@ -7,14 +7,20 @@ import HomeGameContentsBase from './Components/HomeGameContents/HomeGameContents
 import GameDificulty from './Components/GameDificulty/GameDificulty'
 import NotFoundPage from './Components/NotFoundPage/NotFoundPage'
 import GameLevel from './Entites/GameLevel'
-import {createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom'
+import GameContent from './Components/GameContent/GameContent'
 
 function App() {
+
+ 	return <RouterProvider router={router}/>
+}
+
+function Layout() {
 
   return (
     <>
 		<Header/>
-		<RouterProvider router={router}/>
+		<Outlet />
     </>
   )
 }
@@ -165,12 +171,18 @@ var normalDificulty2 = [new GameLevelsDificulty("Easy",
 var gameModes = [new GameMode("Nonogram", normalDificulty), new GameMode("Colored", normalDificulty2)]
 var game = new Game("Picross", gameModes)
 
-
 const router = createBrowserRouter([
-	{path:"/", element:<HomeGameContentsBase/>},
-	{path: "/GameDificulty", element: <GameDificulty {...game}/>},
-	{path:"*", element:<NotFoundPage/>}
-
+	{
+		path: "/",//Home path
+		element: <Layout />,//Control Layout (to add tag link on header)
+		children://All paths
+		[
+			{path: "", element:<HomeGameContentsBase/>},
+			{path: "GameDificulty", element: <GameDificulty {...game}/>},
+			{path: "GameContent", element: <GameContent/>},
+			{path: "*", element:<NotFoundPage/>}
+		]
+	}
 ])
 
 export default App
