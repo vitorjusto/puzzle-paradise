@@ -1,10 +1,62 @@
 import { Link } from 'react-router-dom'
 import '../../../index.css'
 import './Header.css'
-
+import Swal from 'sweetalert2'
 
 function Header() {
 
+	function test()
+	{
+		alert("teste")
+	}
+
+	function MissionClick()
+	{
+		Swal.fire(
+			{
+				  html: `
+				  <div class="MissionBase">
+				  	<div>
+						<h2>Missions</h2>
+				  		<div class="MissionContainer">
+					  		<ul class="MissionGameList">
+					  			<li class="MissionGameListItem">2 Easy Picross</li>
+					  			<li class="MissionGameListItem">3 Medium Picross</li>
+					  			<li class="MissionGameListItem">4 Easy Sudoku</li>
+					  			<li class="MissionGameListItem">4 Easy Sudoku</li>
+					  			<li class="MissionGameListItem">4 Easy Sudoku</li>
+					  			<li class="MissionGameListItem">4 Easy Sudoku</li>
+					  			<li class="MissionGameListItem">4 Easy Sudoku</li>
+					  		</ul>
+					  </div>
+					</div>
+				  	<div>
+						<h2>Daily</h2>
+					  	<div class="MissionContainer">
+    						<ul class="MissionGameList">
+								<li class="MissionGameListItem">2 Easy Picross</li>
+								<li class="MissionGameListItem">3 Medium Picross</li>
+								<li class="MissionGameListItem">4 Easy Sudoku</li>
+								<li class="MissionGameListItem">4 Easy Sudoku</li>
+								<li class="MissionGameListItem">4 Easy Sudoku</li>
+								<li class="MissionGameListItem">4 Easy Sudoku</li>
+								<li class="MissionGameListItem">4 Easy Sudoku</li>
+							</ul>
+						</div>
+						</div>
+					</div>
+  				`,
+				color: "white",
+				width: 700,
+				background: "#333333",
+				showCancelButton: true,
+  				confirmButtonColor: "green",
+  				cancelButtonColor: "green",
+  				confirmButtonText: "Starts Missions",
+  				cancelButtonText: "Starts Daily Missions",
+			}
+		);
+	}
   return (
 	<>
 		<div className="Header">
@@ -24,7 +76,7 @@ function Header() {
 
 			</div>
 			<div className="HeaderContainerRight">
-				<div className="Button"></div>
+				<div className="Button" onClick={MissionClick}></div>
 				<div className="Button"></div>
 				<div className="Button"></div>
 			</div>
