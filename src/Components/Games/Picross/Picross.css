@@ -1,0 +1,5 @@
+.RowGrid
+{
+    display: flex;
+    flex-direction: row;
+}

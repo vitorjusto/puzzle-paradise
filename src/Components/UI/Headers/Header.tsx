@@ -5,11 +5,6 @@ import Swal from 'sweetalert2'
 
 function Header() {
 
-	function test()
-	{
-		alert("teste")
-	}
-
 	function MissionClick()
 	{
 		Swal.fire(
@@ -57,6 +52,7 @@ function Header() {
 			}
 		);
 	}
+	
   return (
 	<>
 		<div className="Header">

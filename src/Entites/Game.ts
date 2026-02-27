@@ -10,5 +10,4 @@ export default class Game
 		this.Name = name;
 		this.GameModes = gameModes;
 	}
-
 }
