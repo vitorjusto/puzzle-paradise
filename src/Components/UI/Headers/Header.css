@@ -44,3 +44,34 @@
 	border-radius: 25px;
 
 }
+
+.MissionBase
+{
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-around;
+}
+
+.MissionContainer
+{
+	text-align: left;
+	width: 310px;
+}
+
+.MissionGameList li:nth-child(odd)
+{
+  background-color: #444444;
+}
+
+.MissionGameList
+{
+  	list-style-type: none;
+	list-style-position: inside;
+	width: auto;
+}
+
+.MissionGameListItem
+{
+	margin: 10px 0px;
+	font-size: x-large;
+}
