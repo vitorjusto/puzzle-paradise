@@ -3,3 +3,8 @@
     display: flex;
     flex-direction: row;
 }
+
+.Cell
+{
+	border: 2px solid black
+}
