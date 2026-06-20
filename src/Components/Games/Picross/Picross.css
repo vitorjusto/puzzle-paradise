@@ -2,9 +2,35 @@
 {
     display: flex;
     flex-direction: row;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
 .Cell
 {
-	border: 2px solid black
+	border: 2px solid black;
+}
+
+.Clues
+{
+	background: gray;
+	width: 50;
+	height: 50
+}
+
+.ColumnClues
+{
+	display: flex;
+  	justify-content: space-between;
+	background: blue;
+	
+}
+
+.RowClues
+{
+	display: flex;
+  	justify-content: space-between;
+  	flex-direction: column;
+	background: blue;
+	
 }
