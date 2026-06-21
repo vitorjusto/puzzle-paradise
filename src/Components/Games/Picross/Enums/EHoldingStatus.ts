@@ -1,0 +1,7 @@
+export enum EHoldingStatus{
+	NOT_HOLDING,
+
+	HOLDING_SELECTED,
+	HOLDING_NONE,
+	HOLDING_MARKED,
+}
