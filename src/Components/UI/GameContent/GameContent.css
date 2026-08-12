@@ -1,6 +1,29 @@
 .GameContent
+{	margin-top: 30px;
+
+	height: 1000px;
+}
+
+.GameSubContent
 {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+}
+
+.MainContent
+{
+	grid-area: MainContent;
+	display: flex;
+	align-items: center;
 	margin: auto;
-	text-align: center;
-	margin-top: 50px;
+	padding: 30px
+}
+
+.GameMainContent
+{
+	display: flex;
+	width:80%;
+	align-items: center;
+	flex-direction: column;
 }

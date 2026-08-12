@@ -1,0 +1,27 @@
+
+.LateralContent
+{
+	grid-area: LateralContent;
+	display: flex;
+	align-items: end;
+}
+
+.TutorialText
+{
+	height: 500px;
+	width: 0px;
+	background: #fff;
+
+	margin-right: 20px; 
+	grid-area: LateralContent;
+	transition: 0.5s;
+}
+
+.ToggleButton
+{
+	background-color: red;
+	width: 60px;
+	height: 60px;
+	border-radius: 100px;
+	display: ;
+}
